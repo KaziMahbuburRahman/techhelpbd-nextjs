@@ -8,6 +8,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
+import { Switch } from "../ui/switch";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   return (
@@ -67,6 +69,15 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
+        {/* color switcher and login button */}
+        <div className="hidden lg:flex">
+          <div className="flex justify-center items-center space-x-3">
+            <span>Dark Mode</span>
+            <Switch/>
+            <Button variant="default">Login</Button>
+
+          </div>
+        </div>
       </nav>
     </header>
   );
