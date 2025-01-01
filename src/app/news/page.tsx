@@ -1,9 +1,8 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const NewsPage = () => {
-  return (
-    <div>NewsPage</div>
-  )
-}
+  return <div>All News</div>;
+};
 
-export default NewsPage
+export default NewsPage;
