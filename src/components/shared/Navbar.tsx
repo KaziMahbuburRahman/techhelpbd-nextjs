@@ -1,21 +1,16 @@
-
 import Link from "next/link";
 import React from "react";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
-import { AiOutlineMenu } from "react-icons/ai";
-
 import NavbarClient from "./Navbar.client";
+import NavbarMenuBtn from "./Navbar.menuBtn";
 
 const Navbar = () => {
-
   return (
     <header className="shadow-md py-4">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-4">
@@ -28,9 +23,9 @@ const Navbar = () => {
         {/* desktop menu */}
         <NavigationMenu className="hidden lg:flex ">
           <NavigationMenuList>
-          <NavigationMenuItem className="flex space-x-8 items-center">
-            <NavbarClient/>
-          </NavigationMenuItem>
+            <NavigationMenuItem className="flex space-x-8 items-center">
+              <NavbarClient />
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -43,9 +38,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="lg:hidden">
-          <Button variant={"default"}>
-            <AiOutlineMenu size={24} />
-          </Button>
+          <NavbarMenuBtn/>
         </div>
       </nav>
     </header>
