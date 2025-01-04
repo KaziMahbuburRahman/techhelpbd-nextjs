@@ -1,4 +1,4 @@
-"use client"
+
 import Link from "next/link";
 import React from "react";
 import {
@@ -11,10 +11,11 @@ import {
 import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
 import { AiOutlineMenu } from "react-icons/ai";
-import { usePathname } from "next/navigation";
+
+import NavbarClient from "./Navbar.client";
 
 const Navbar = () => {
-  const pathname = usePathname()
+
   return (
     <header className="shadow-md py-4">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-4">
@@ -27,53 +28,9 @@ const Navbar = () => {
         {/* desktop menu */}
         <NavigationMenu className="hidden lg:flex ">
           <NavigationMenuList>
-            <NavigationMenuItem className="flex space-x-8 items-center">
-              <Link
-                href="/news"
-                className={pathname==='/news'? "text-red-500" : "hover:text-red-500"}
-              >
-                News
-              </Link>
-
-              <div className={pathname==='/services'? "text-red-500" : "hover:text-red-500"}>
-                <NavigationMenuTrigger className="dark:bg-gray-900 dark:text-white">
-                  Sevices
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="text-gray-600 shadow-md rounded-md px-5 py-4 space-y-2">
-                    <li>
-                      <Link href="/services/web">
-                        Web Development
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/app">
-                        Mobile Apps
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/seo">
-                        SEO
-                      </Link>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </div>
-
-              <Link
-                href="/about"
-                className={pathname==='/about'? "text-red-500" : "hover:text-red-500"}
-              >
-                About
-              </Link>
-
-              <Link
-                href="/contact"
-                className={pathname==='/contact'? "text-red-500" : "hover:text-red-500"}
-              >
-                Contact
-              </Link>
-            </NavigationMenuItem>
+          <NavigationMenuItem className="flex space-x-8 items-center">
+            <NavbarClient/>
+          </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
