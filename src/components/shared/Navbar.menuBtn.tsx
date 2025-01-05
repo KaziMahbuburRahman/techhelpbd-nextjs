@@ -1,8 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Button } from '../ui/button';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { CrossIcon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 
 const NavbarMenuBtn = () => {
@@ -13,7 +12,7 @@ const NavbarMenuBtn = () => {
   return (
     <Button onClick={handleMenuClick} variant={"default"}>
             {
-              menu? <Menu size={24} /> : <X size={24} /> 
+              menu? <X size={24} /> : <Menu size={24} /> 
             }
           </Button>
   )
