@@ -4,6 +4,11 @@ import Image from 'next/image'
 import { Button } from '../ui/button'
 import { NewsCardProp } from '@/types/news'
 const NewsCard = ({item}:NewsCardProp) => {
+
+  const title = item.title.length > 63 ?  `${item.title.substring(0,63)}...` : item.title;
+
+  const description = item?.description.length > 143 ? `${item?.description.substring(0,143)}...` : item?.description;
+
   return (
     <div className='shadow-md p-5'>
         <Image
@@ -13,8 +18,8 @@ const NewsCard = ({item}:NewsCardProp) => {
         height={500}
         alt='News Img Thumbnail'
         />
-        <h2 className='text-xl font-bold py-2'>What To Expect From United Natural Foods Inc (UNFI) Q4 2024 Earnings</h2>
-        <p className='py-2'>United Natural Foods Inc (UNFI) will release its Q4 2024 earnings on October 1, 2024....</p>
+        <h2 className='text-xl font-bold py-2'>{title}</h2>
+        <p className='py-2'>{description}</p>
         <Button>Read More</Button>
     </div>
   )
