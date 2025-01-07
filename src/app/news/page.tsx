@@ -1,7 +1,12 @@
+import NewsList from "@/components/news/NewsList";
 import React from "react";
 
 const NewsPage = () => {
-  return <div>All News</div>;
+  return (
+    <div>
+      <NewsList />
+    </div>
+  );
 };
 
 export default NewsPage;
