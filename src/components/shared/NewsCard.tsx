@@ -17,6 +17,7 @@ const NewsCard = ({item}:NewsCardProp) => {
         width={500}
         height={500}
         alt='News Img Thumbnail'
+        priority
         />
         <h2 className='text-xl font-bold py-2'>{title}</h2>
         <p className='py-2'>{description}</p>
