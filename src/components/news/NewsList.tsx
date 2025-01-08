@@ -18,7 +18,7 @@ const NewsList = () => {
     };
     getnews();
   }, [search, category]);
-  //   console.log(news);
+  const categories = ["all", "tech", "health", "sports", "business"];
   return (
     <div>
       <h2 className="text-xl font-bold py-8">Latest News</h2>
@@ -34,14 +34,14 @@ const NewsList = () => {
         <div>
           <h2 className="text-lg font-bold">Filter by Category:</h2>
 
-          <Select>
+          <Select onValueChange={(value)=>setCategory(value)}>
             <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Select Category" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 {
-                  news.map((news)=><SelectItem className="capitalize" key={news._id} value={news.categories}>{news.categories}</SelectItem>)
+                  categories.map((category)=><SelectItem className="capitalize" key={category} onChange={()=>console.log("hello")} value={category}>{category}</SelectItem>)
                 }
 
               </SelectGroup>
