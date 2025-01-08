@@ -4,8 +4,11 @@ import React from 'react'
 import { NavigationMenuContent, NavigationMenuTrigger } from '../ui/navigation-menu'
 import { usePathname } from 'next/navigation'
 
+
 const NavbarClient = () => {
+    
     const pathname = usePathname();
+
   return (
     <>
     <Link href="/news" className={pathname === '/news' ? "text-red-500" : "hover:text-red-500"}>
