@@ -41,7 +41,7 @@ const NewsList = () => {
             <SelectContent>
               <SelectGroup>
                 {
-                  categories.map((category)=><SelectItem className="capitalize" key={category} onChange={()=>console.log("hello")} value={category}>{category}</SelectItem>)
+                  categories.map((category)=><SelectItem className="capitalize" key={category} value={category}>{category}</SelectItem>)
                 }
 
               </SelectGroup>
