@@ -23,6 +23,7 @@ export interface NewsItem  {
   source: "string",
   categories: "string",
   relevance_score: "string",
+  imageUrl: "string"
 };
 
 export interface NewsCardProp {
