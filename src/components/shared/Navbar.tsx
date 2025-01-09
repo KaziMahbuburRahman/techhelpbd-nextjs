@@ -1,5 +1,5 @@
+"use client"
 import Link from "next/link";
-import React from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,10 +9,13 @@ import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
 import NavbarClient from "./Navbar.client";
 import NavbarMenuBtn from "./Navbar.menuBtn";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/themeContext";
 
 const Navbar = () => {
+  const {isDarkMode, toggleTheme}: any =  useContext(ThemeContext)
   return (
-    <header className="shadow-md py-4">
+    <header className={`shadow-md py-4 dark:bg-gray-900 dark:text-white`}>
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-4">
         {/* logo */}
 
@@ -33,12 +36,12 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-3">
           <div className="flex justify-center items-center space-x-3">
             <span>Dark Mode</span>
-            <Switch />
+            <Switch onClick={toggleTheme} />
             <Button variant="default">Login</Button>
           </div>
         </div>
         <div className="lg:hidden">
-          <NavbarMenuBtn/>
+          <NavbarMenuBtn />
         </div>
       </nav>
     </header>

@@ -18,7 +18,7 @@ const NewsDetailsPage = async ({ params }: { params: { id: string } }) => {
     `https://news-api-next-js-kappa.vercel.app/api/news/${params.id}`
   ).then((res) => res.json());
 
-  console.log(params.id);
+  // console.log(params.id);
 
   return (
     <section className="py-12">

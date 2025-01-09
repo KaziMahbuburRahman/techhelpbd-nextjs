@@ -51,7 +51,7 @@ const NewsList = () => {
 
         </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 py-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 py-5 gap-5">
         {news.map((news) => (
           <NewsCard key={news._id} item={news} />
         ))}
