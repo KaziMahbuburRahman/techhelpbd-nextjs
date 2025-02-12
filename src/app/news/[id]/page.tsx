@@ -4,6 +4,11 @@ import Image from "next/image";
 export const revalidate = 60;
 export const dynamicParams = true;
 
+// Define PageProps explicitly
+type PageProps = {
+  params: Promise<{ id: string }>;
+}
+
 export async function generateStaticParams() {
   const posts: NewsItem[] = await fetch(
     "https://news-api-next-js-lilac.vercel.app/api/news"
@@ -13,12 +18,13 @@ export async function generateStaticParams() {
   }));
 }
 
-const NewsDetailsPage = async ({ params }: { params: { id: string } }) => {
+const NewsDetailsPage = async ({ params }: PageProps) => {
+  const {id} = await params;
   const post = await fetch(
-    `https://news-api-next-js-lilac.vercel.app/api/news/${params.id}`
+    `https://news-api-next-js-lilac.vercel.app/api/news/${id}`
   ).then((res) => res.json());
 
-  // console.log(params.id);
+  // console.log(id);
 
   return (
     <section className="py-12">
