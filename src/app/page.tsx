@@ -5,7 +5,7 @@ import { NewsItem } from "@/types/news";
 
 const Home = async () => {
   const news = await fetch(
-    "https://news-api-next-js-kappa.vercel.app/api/news"
+    "https://news-api-next-js-lilac.vercel.app/api/news"
   ).then((res) => res.json());
   console.log(news);
 

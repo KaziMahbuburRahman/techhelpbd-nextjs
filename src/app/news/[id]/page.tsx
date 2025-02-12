@@ -6,7 +6,7 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const posts: NewsItem[] = await fetch(
-    "https://news-api-next-js-kappa.vercel.app/api/news"
+    "https://news-api-next-js-lilac.vercel.app/api/news"
   ).then((res) => res.json());
   return posts.slice(0, 5).map((post) => ({
     id: String(post._id),
@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 
 const NewsDetailsPage = async ({ params }: { params: { id: string } }) => {
   const post = await fetch(
-    `https://news-api-next-js-kappa.vercel.app/api/news/${params.id}`
+    `https://news-api-next-js-lilac.vercel.app/api/news/${params.id}`
   ).then((res) => res.json());
 
   // console.log(params.id);
