@@ -13,7 +13,7 @@ import { useContext } from "react";
 import { ThemeContext } from "@/context/themeContext";
 
 const Navbar = () => {
-  const {isDarkMode, toggleTheme}: any =  useContext(ThemeContext)
+  const {toggleTheme} = useContext(ThemeContext)
   return (
     <header className={`shadow-md py-4 dark:bg-gray-900 dark:text-white`}>
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-4">

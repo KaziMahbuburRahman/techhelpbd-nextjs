@@ -2,12 +2,15 @@
 
 import { createContext, useEffect, useState } from "react";
 
-interface ThemeContextType {
+export interface ThemeContextType {
   isDarkMode: boolean;
   toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextType>({
+  isDarkMode: false,
+  toggleTheme: () => {},
+});
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -17,12 +20,12 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   useEffect(() => {
-    if(isDarkMode) {
-        document.body.classList.add("dark")
-    } else{
-        document.body.classList.remove("dark")
+    if (isDarkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
     }
-  }, [isDarkMode])
+  }, [isDarkMode]);
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
