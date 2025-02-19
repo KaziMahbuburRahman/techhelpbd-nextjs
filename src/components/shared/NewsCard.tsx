@@ -13,7 +13,7 @@ const NewsCard = ({ item }: NewsCardProp) => {
       : item?.description;
 
   return (
-    <div className="shadow-md p-5 bg-[#1F2937]">
+    <div className="shadow-md p-5 dark:bg-[#1F2937]">
       <Image
         className="rounded"
         src={item?.imageUrl}
