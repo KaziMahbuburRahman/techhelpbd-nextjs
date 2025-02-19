@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { NavigationMenuContent, NavigationMenuTrigger } from '../ui/navigation-menu'
+// import { NavigationMenuContent, NavigationMenuTrigger } from '../ui/navigation-menu'
 import { usePathname } from 'next/navigation'
 
 
