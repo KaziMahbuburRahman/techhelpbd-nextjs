@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="flex justify-center items-center space-x-3">
             <span>Dark Mode</span>
             <Switch onClick={toggleTheme} />
-            <Button variant="default">Login</Button>
+            {/* <Button variant="default">Login</Button> */}
           </div>
         </div>
         <div className="lg:hidden">
