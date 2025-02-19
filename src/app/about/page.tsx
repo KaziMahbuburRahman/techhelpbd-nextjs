@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutComponent = () => {
@@ -5,9 +7,9 @@ const AboutComponent = () => {
     <article id="the-post" className="container mx-auto px-4 py-8 shadow-lg my-8 border rounded-lg">
       <header className="entry-header-outer">
         <nav id="breadcrumb" className="text-sm text-gray-600">
-          <a href="/" className="hover:underline">
+          <Link href="/" className="hover:underline">
             <span className="tie-icon-home" aria-hidden="true"></span> Home
-          </a>
+          </Link>
           <em className="mx-2">»</em>
           <span className="current">About Us</span>
         </nav>
@@ -101,8 +103,8 @@ const AboutComponent = () => {
           aria-describedby="caption-attachment-152"
           className="wp-caption alignnone mt-8"
         >
-          <a href="https://techhelpbd.com/wp-content/uploads/2021/07/img_60ea90164ba9d.png">
-            <img
+          <Link href="https://techhelpbd.com/wp-content/uploads/2021/07/img_60ea90164ba9d.png">
+            <Image
               className="lazy-loaded"
               src="https://techhelpbd.com/wp-content/uploads/2021/07/img_60ea90164ba9d.png"
               alt="Tech Help BD"
@@ -110,7 +112,7 @@ const AboutComponent = () => {
               height="361"
               title="About Us 1"
             />
-          </a>
+          </Link>
           <figcaption id="caption-attachment-152" className="wp-caption-text text-center">
             Facebook group of Tech Help BD
           </figcaption>
@@ -128,8 +130,8 @@ const AboutComponent = () => {
           aria-describedby="caption-attachment-153"
           className="wp-caption alignnone mt-8"
         >
-          <a href="https://techhelpbd.com/wp-content/uploads/2021/07/img_60ea9226e5ae2.png">
-            <img
+          <Link href="https://techhelpbd.com/wp-content/uploads/2021/07/img_60ea9226e5ae2.png">
+            <Image
               className="lazy-loaded"
               src="https://techhelpbd.com/wp-content/uploads/2021/07/img_60ea9226e5ae2-1024x771.png"
               alt="Tech Help BD Team"
@@ -137,7 +139,7 @@ const AboutComponent = () => {
               height="486"
               title="About Us 2"
             />
-          </a>
+          </Link>
           <figcaption id="caption-attachment-153" className="wp-caption-text text-center">
             Tech Help BD Team
           </figcaption>
