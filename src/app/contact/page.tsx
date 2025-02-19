@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ContactPage = () => {
@@ -8,9 +9,9 @@ const ContactPage = () => {
     >
       <header className="entry-header-outer">
         <nav id="breadcrumb" className="text-sm text-gray-600">
-          <a href="/" className="hover:underline">
+          <Link href="/" className="hover:underline">
             <span className="tie-icon-home" aria-hidden="true"></span> Home
-          </a>
+          </Link>
           <em className="mx-2">»</em>
           <span className="current">Contact Us</span>
         </nav>
