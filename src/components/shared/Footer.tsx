@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Github, Instagram, Twitter } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -20,43 +21,43 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="flex space-x-6 text-gray-600 dark:text-gray-400">
-            <a href="/about" className="hover:text-gray-900 dark:hover:text-white">
+            <Link href="/about" className="hover:text-gray-900 dark:hover:text-white">
               About Us
-            </a>
-            {/* <a href="/services" className="hover:text-gray-900 dark:hover:text-white">
+            </Link>
+            {/* <Link href="/services" className="hover:text-gray-900 dark:hover:text-white">
               Services
-            </a> */}
-            <a href="/contact" className="hover:text-gray-900 dark:hover:text-white">
+            </Link> */}
+            <Link href="/contact" className="hover:text-gray-900 dark:hover:text-white">
               Contact
-            </a>
-            <a href="https://techhelpbd.com/privacy-policy/" className="hover:text-gray-900 dark:hover:text-white">
+            </Link>
+            <Link href="https://techhelpbd.com/privacy-policy/" className="hover:text-gray-900 dark:hover:text-white">
               Privacy Policy
-            </a>
+            </Link>
           </div>
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a
+            <Link
               href="https://twitter.com"
               aria-label="Twitter"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
             >
               <Twitter size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://instagram.com"
               aria-label="Instagram"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
             >
               <Instagram size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://github.com"
               aria-label="Github"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
             >
               <Github size={24} />
-            </a>
+            </Link>
           </div>
         </div>
 
