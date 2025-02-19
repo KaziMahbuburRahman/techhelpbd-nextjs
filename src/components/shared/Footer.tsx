@@ -29,7 +29,7 @@ const Footer = () => {
             <a href="/contact" className="hover:text-gray-900 dark:hover:text-white">
               Contact
             </a>
-            <a href="/privacy" className="hover:text-gray-900 dark:hover:text-white">
+            <a href="https://techhelpbd.com/privacy-policy/" className="hover:text-gray-900 dark:hover:text-white">
               Privacy Policy
             </a>
           </div>
