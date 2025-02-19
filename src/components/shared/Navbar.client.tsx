@@ -14,7 +14,7 @@ const NavbarClient = () => {
     <Link href="/news" className={pathname === '/news' ? "text-red-500" : "hover:text-red-500"}>
       News
     </Link>
-    <div className={pathname === '/services' ? "text-red-500" : "hover:text-red-500"}>
+    {/* <div className={pathname === '/services' ? "text-red-500" : "hover:text-red-500"}>
       <NavigationMenuTrigger className="dark:bg-gray-900 dark:text-white">
         Services
       </NavigationMenuTrigger>
@@ -31,7 +31,7 @@ const NavbarClient = () => {
           </li>
         </ul>
       </NavigationMenuContent>
-    </div>
+    </div> */}
     <Link href="/about" className={pathname === '/about' ? "text-red-500" : "hover:text-red-500"}>
       About
     </Link>
